@@ -1,294 +1,425 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-      
-  <!-- HTML Meta Tags -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <base href="/">
-  <title>Ahsan YouTube Thumbnail Downloader – Download Video Thumbnails in HD</title>
-  <link rel="canonical" href="http://ahmatrix.netlify.app/ytthubnail/index.html">
-  <link rel="icon" type="https://i.ibb.co/RkcM8WSD/Chat-GPT-Image-Feb-12-2026-11-32-37-PM.png">
-  <meta name="robots" content="index, follow">
-  <meta name="googlebot" content="index, follow">
-  <meta name="description" content="AhsanYouTube Thumbnail Downloader is a simple and efficient tool that allows users to download high-resolution thumbnails from any public YouTube video.">
-  <meta name="author" content="Ahmatrix">
-  <meta name="theme-color" content="">
-
-  <!-- Google Search Engine -->
-  <meta itemprop="name" content="Ahsan">
-  <meta itemprop="description" content="Ahsan YouTube Thumbnail Downloader is a simple and efficient tool that allows users to download high-resolution thumbnails from any public YouTube video.">
-  <meta itemprop="image" content="data:image/png;base64,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">
-
-  <!-- Facebook Meta Tags -->
-  <meta property="og:url" content="http://ahmatrix.netlify.app/ytthubnail/index.html">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Ahsan YouTube Thumbnail Downloader – Download Video Thumbnails in HD">
-  <meta property="og:description" content="Ahsan YouTube Thumbnail Downloader is a simple and efficient tool that allows users to download high-resolution thumbnails from any public YouTube video.">
-  <meta property="og:image" content="data:image/png;base64,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">
-  <meta property="og:locale" content="en-US">
-
-  <!-- Twitter Meta Tags -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Ahsan YouTube Thumbnail Downloader – Download Video Thumbnails in HD">
-  <meta name="twitter:site" content="ahmii_dll">
-  <meta name="twitter:description" content="Ahsan YouTube Thumbnail Downloader is a simple and efficient tool that allows users to download high-resolution thumbnails from any public YouTube video.">
-  <meta name="twitter:image" content="data:image/png;base64,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">
-  <meta name="twitter:image:alt" content="Youtube Thubnail Downloader">
-
-  <!-- Meta Tags Generated via https://gustavoquinalha.github.io/seotopper -->
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AHSAN THUMBNAIL DOWNLOADER</title>
     
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-   <link rel="icon" type="image/x-icon" href="https://i.ibb.co/JwHmZVTY/logo-of-my-channel.png">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
     <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
-            background-color: #f0f2f5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0a0a0a;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
         }
 
-        .main-container {
-            max-width: 800px;
+        .container {
+            max-width: 650px;
+            width: 100%;
         }
 
+        /* HEADER */
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #ff0000;
+            box-shadow: 0 0 30px rgba(255,0,0,0.5);
+            margin-bottom: 15px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 30px rgba(255,0,0,0.5); }
+            50% { box-shadow: 0 0 60px rgba(255,0,0,0.8); }
+        }
+
+        h1 {
+            font-size: 2em;
+            font-weight: 800;
+            background: linear-gradient(45deg, #ff0000, #ff4444);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            color: #888;
+            font-size: 0.9em;
+        }
+
+        /* INPUT CARD */
         .card {
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            border: none;
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
         }
 
-        .btn-gradient {
-            background-image: linear-gradient(to right, #DA22FF 0%, #9733EE 100%);
-            border: none;
-            color: white;
-            transition: all 0.3s ease-in-out;
+        .input-group {
+            position: relative;
+            margin-bottom: 15px;
         }
 
-        .btn-gradient:hover {
+        .input-icon {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.3em;
+        }
+
+        .url-input {
+            width: 100%;
+            padding: 16px 20px 16px 45px;
+            background: #0a0a0a;
+            border: 2px solid #333;
+            border-radius: 15px;
             color: white;
+            font-size: 1em;
+            outline: none;
+            transition: all 0.3s;
+        }
+
+        .url-input:focus {
+            border-color: #ff0000;
+            box-shadow: 0 0 20px rgba(255,0,0,0.2);
+        }
+
+        .url-input::placeholder {
+            color: #555;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 15px;
+            font-size: 1.1em;
+            font-weight: 700;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s;
+        }
+
+        .btn-fetch {
+            background: linear-gradient(45deg, #ff0000, #cc0000);
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .btn-fetch:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(218, 34, 255, 0.4);
+            box-shadow: 0 10px 30px rgba(255,0,0,0.4);
         }
 
-        #results-container {
+        .btn-fetch:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* RESULT */
+        .result-area {
             display: none;
-            opacity: 0;
-            transition: opacity 0.5s ease-in-out;
-            animation: fadeIn 0.5s forwards;
+            margin-top: 20px;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .result-area.show {
+            display: block;
         }
 
         @keyframes fadeIn {
-            from {
-                transform: translateY(20px);
-                opacity: 0;
-            }
-
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        #preview-image {
+        .video-info {
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: rgba(255,0,0,0.05);
+            border-radius: 15px;
+            border: 1px solid rgba(255,0,0,0.2);
+        }
+
+        .video-title {
+            font-weight: 700;
+            font-size: 1.1em;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+
+        .video-id {
+            font-size: 0.8em;
+            color: #ff4444;
+            font-family: monospace;
+        }
+
+        .thumbnails-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .thumb-card {
+            background: #0a0a0a;
+            border: 1px solid #333;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        .thumb-card:hover {
+            border-color: #ff0000;
+            box-shadow: 0 5px 20px rgba(255,0,0,0.2);
+        }
+
+        .thumb-preview {
             width: 100%;
-            max-width: 480px;
-            height: auto;
-            border-radius: 0.5rem;
+            aspect-ratio: 16/9;
             object-fit: cover;
-            border: 3px solid #fff;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            display: block;
+            cursor: pointer;
         }
 
-        /* --- Mobile First Font Adjustments --- */
-        /* Default styles for mobile */
-        .h3 {
-            font-size: 1.5rem;
+        .thumb-info {
+            padding: 12px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
         }
 
-        .form-control-lg {
-            font-size: 1rem;
-            padding: 0.75rem 1rem;
+        .quality-label {
+            font-weight: 700;
+            font-size: 0.85em;
+            color: #fff;
         }
 
-        .btn-lg {
-            font-size: 1rem;
-            padding: 0.75rem 1rem;
+        .resolution {
+            font-size: 0.7em;
+            color: #888;
         }
 
-        .list-group-item strong {
-            font-size: 0.9rem;
+        .btn-download {
+            padding: 8px 18px;
+            background: #ff0000;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 0.8em;
+            transition: all 0.3s;
+            white-space: nowrap;
+            text-decoration: none;
+            display: inline-block;
         }
 
-        .list-group-item small {
-            font-size: 0.8rem;
+        .btn-download:hover {
+            background: #cc0000;
+            transform: scale(1.05);
         }
 
-        /* Larger styles for tablets and desktops (screens wider than 576px) */
-        @media (min-width: 576px) {
-            .h3 {
-                font-size: 1.75rem;
-            }
+        .error-msg {
+            color: #ff4444;
+            text-align: center;
+            margin-top: 15px;
+            display: none;
+            padding: 10px;
+            background: rgba(255,0,0,0.1);
+            border-radius: 10px;
+        }
 
-            .form-control-lg {
-                font-size: 1.25rem;
-            }
+        .toast {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 14px 24px;
+            border-radius: 12px;
+            color: white;
+            font-weight: 600;
+            z-index: 9999;
+            display: none;
+            animation: slideIn 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
 
-            .btn-lg {
-                font-size: 1.25rem;
-            }
+        @keyframes slideIn {
+            from { transform: translateX(400px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
 
-            .list-group-item strong {
-                font-size: 1rem;
-            }
+        .toast-success { background: #2ed573; }
+        .toast-error { background: #ff4757; }
+        .toast-info { background: #ffa502; }
 
-            .list-group-item small {
-                font-size: 0.875rem;
-            }
+        @media (max-width: 500px) {
+            h1 { font-size: 1.5em; }
+            .card { padding: 20px; }
+            .thumbnails-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
-
-<body class="d-flex align-items-center py-4 bg-body-tertiary">
-
-    <main class="container main-container">
-        <div class="card p-4 p-md-5 rounded-4">
-            <div class="text-center mb-4">
-                <h1 class="h3 mb-2 fw-bold">Ahsan Youtube Thubnail Downloader</h1>
-                <p class="text-muted">Download high-quality YouTube thumbnails instantly</p>
-            </div>
-
-            <!-- Search Form -->
-            <form id="search-form" class="mb-4">
-                <div class="input-group">
-                    <span class="input-group-text bg-light border-end-0"><i
-                            class="bi bi-youtube text-danger"></i></span>
-                    <input type="url" id="yt-url" class="form-control form-control-lg border-start-0"
-                        placeholder="https://youtu.be/..." required>
-                    <button class="btn btn-gradient btn-lg fw-semibold" type="submit" id="fetch-btn">
-                        <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
-                        Fetch
-                    </button>
-                </div>
-            </form>
-
-            <!-- Results Section -->
-            <div id="results-container">
-                <div class="text-center mb-4">
-                    <img id="preview-image" src="" alt="Thumbnail Preview">
-                </div>
-                <div id="download-links" class="list-group"></div>
-            </div>
-
-            <!-- Alert Section -->
-            <div id="alert-container"></div>
-
+<body>
+    <div class="container">
+        <!-- HEADER -->
+        <div class="header">
+            <img src="https://i.ibb.co/Tx9YtRXT/logo.png" alt="Logo" class="logo-img" id="logoImg" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2280%22 height=%2280%22><rect fill=%22%23ff0000%22 width=%2280%22 height=%2280%22 rx=%2240%22/><text x=%2240%22 y=%2255%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2240%22>🎬</text></svg>'">
+            <h1>AHSAN THUMBNAIL DOWNLOADER</h1>
+            <p class="subtitle">Download YouTube Thumbnails in All Qualities</p>
         </div>
-        <footer class="text-center text-body-secondary mt-4">
-            Powered by <a href="https://Ahsan-toolkit.netlify.app" target="_blank" class="text-reset">Ahsan Web
-                Tools</a>
-        </footer>
-    </main>
+
+        <!-- INPUT CARD -->
+        <div class="card">
+            <div class="input-group">
+                <span class="input-icon">🔗</span>
+                <input type="text" class="url-input" id="videoUrl" placeholder="Paste YouTube Video URL here..." autocomplete="off">
+            </div>
+            <button class="btn btn-fetch" id="fetchBtn" onclick="fetchThumbnails()">
+                🎬 Get Thumbnails
+            </button>
+            <div class="error-msg" id="errorMsg"></div>
+        </div>
+
+        <!-- RESULT -->
+        <div class="result-area" id="resultArea">
+            <div class="video-info" id="videoInfo"></div>
+            <div class="thumbnails-grid" id="thumbnailsGrid"></div>
+        </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // DOM Elements
-            const searchForm = document.getElementById('search-form');
-            const urlInput = document.getElementById('yt-url');
-            const fetchBtn = document.getElementById('fetch-btn');
-            const resultsContainer = document.getElementById('results-container');
-            const previewImage = document.getElementById('preview-image');
-            const downloadLinksContainer = document.getElementById('download-links');
-            const alertContainer = document.getElementById('alert-container');
+        // QUALITY OPTIONS
+        const qualities = [
+            { label: 'HD (Max Resolution)', key: 'maxresdefault', size: '1280×720', icon: '🏆' },
+            { label: 'High Quality', key: 'hqdefault', size: '480×360', icon: '⭐' },
+            { label: 'Standard', key: 'sddefault', size: '640×480', icon: '📸' },
+            { label: 'Medium', key: 'mqdefault', size: '320×180', icon: '🖼️' },
+            { label: 'Default', key: 'default', size: '120×90', icon: '📷' }
+        ];
 
-            // The URL of your new, single thumbnail API worker
-            const API_URL = 'https://yt-thumbnail-dl.f-a-k.workers.dev/';
+        // EXTRACT VIDEO ID
+        function extractVideoId(url) {
+            const patterns = [
+                /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/|youtube\.com\/v\/|youtube\.com\/shorts\/)([a-zA-Z0-9_-]{11})/,
+                /^([a-zA-Z0-9_-]{11})$/
+            ];
+            
+            for (const pattern of patterns) {
+                const match = url.match(pattern);
+                if (match) return match[1];
+            }
+            return null;
+        }
 
-            // --- Main Fetch Logic ---
-            searchForm.addEventListener('submit', async (e) => {
-                e.preventDefault();
-                const youtubeUrl = urlInput.value.trim();
-                if (!youtubeUrl) return;
+        // FETCH THUMBNAILS
+        window.fetchThumbnails = async function() {
+            const url = document.getElementById('videoUrl').value.trim();
+            const errorMsg = document.getElementById('errorMsg');
+            const resultArea = document.getElementById('resultArea');
+            const btn = document.getElementById('fetchBtn');
 
-                setLoading(true);
-                hideAlert();
-                resultsContainer.style.display = 'none';
+            errorMsg.style.display = 'none';
+            resultArea.classList.remove('show');
 
-                try {
-                    const response = await fetch(`${API_URL}?url=${encodeURIComponent(youtubeUrl)}`);
-                    const data = await response.json();
-
-                    if (!data.success) {
-                        throw new Error(data.error || 'Could not fetch thumbnails.');
-                    }
-
-                    displayResults(data);
-
-                } catch (error) {
-                    showAlert(error.message, 'danger');
-                } finally {
-                    setLoading(false);
-                }
-            });
-
-            // --- UI Helper Functions ---
-            function displayResults(data) {
-                if (data.thumbnails && data.thumbnails.length > 0) {
-                    previewImage.src = data.thumbnails[0].url;
-                }
-
-                downloadLinksContainer.innerHTML = '';
-                data.thumbnails.forEach(thumb => {
-                    const link = document.createElement('a');
-                    link.href = thumb.url;
-                    link.className = 'list-group-item list-group-item-action d-flex justify-content-between align-items-center';
-                    link.setAttribute('download', '');
-
-                    const textDiv = document.createElement('div');
-                    const qualityText = document.createElement('strong');
-                    qualityText.className = 'mb-1';
-                    qualityText.textContent = thumb.quality;
-                    const resolutionText = document.createElement('small');
-                    resolutionText.className = 'text-muted';
-                    resolutionText.textContent = thumb.resolution;
-                    textDiv.appendChild(qualityText);
-                    textDiv.appendChild(document.createElement('br'));
-                    textDiv.appendChild(resolutionText);
-
-                    const icon = document.createElement('span');
-                    icon.className = 'badge bg-primary rounded-pill p-2';
-                    icon.innerHTML = '<i class="bi bi-download"></i>';
-
-                    link.appendChild(textDiv);
-                    link.appendChild(icon);
-                    downloadLinksContainer.appendChild(link);
-                });
-
-                resultsContainer.style.display = 'block';
+            if (!url) {
+                errorMsg.textContent = '❌ Please enter a YouTube URL';
+                errorMsg.style.display = 'block';
+                return;
             }
 
-            function setLoading(isLoading) {
-                const spinner = fetchBtn.querySelector('.spinner-border');
-                fetchBtn.disabled = isLoading;
-                spinner.classList.toggle('d-none', !isLoading);
+            const videoId = extractVideoId(url);
+            
+            if (!videoId) {
+                errorMsg.textContent = '❌ Invalid YouTube URL. Please check and try again.';
+                errorMsg.style.display = 'block';
+                return;
             }
 
-            function showAlert(message, type = 'danger') {
-                alertContainer.innerHTML = `<div class="alert alert-${type} alert-dismissible fade show mt-3" role="alert">
-                                            ${message}
-                                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                        </div>`;
-            }
+            btn.disabled = true;
+            btn.textContent = '⏳ Loading...';
 
-            function hideAlert() {
-                alertContainer.innerHTML = '';
-            }
+            // Small delay for UX
+            await new Promise(r => setTimeout(r, 500));
+
+            // Show video info
+            document.getElementById('videoInfo').innerHTML = `
+                <div class="video-title">🎬 Video Found!</div>
+                <div class="video-id">ID: ${videoId}</div>
+            `;
+
+            // Generate thumbnails
+            const grid = document.getElementById('thumbnailsGrid');
+            grid.innerHTML = qualities.map(q => {
+                const imgUrl = `https://img.youtube.com/vi/${videoId}/${q.key}.jpg`;
+                return `
+                    <div class="thumb-card">
+                        <img src="${imgUrl}" 
+                             class="thumb-preview" 
+                             alt="${q.label}" 
+                             loading="lazy"
+                             onclick="window.open('${imgUrl}', '_blank')"
+                             onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22320%22 height=%22180%22><rect fill=%22%23111%22 width=%22320%22 height=%22180%22/><text x=%22160%22 y=%2295%22 text-anchor=%22middle%22 fill=%22%23888%22 font-size=%2220%22>Not Available</text></svg>'">
+                        <div class="thumb-info">
+                            <div>
+                                <div class="quality-label">${q.icon} ${q.label}</div>
+                                <div class="resolution">${q.size}</div>
+                            </div>
+                            <a href="${imgUrl}" 
+                               class="btn-download" 
+                               download="AHSAN_Thumbnail_${videoId}_${q.key}.jpg"
+                               onclick="showToast('✅ Downloading ${q.label}...', 'success')">
+                                📥 Download
+                            </a>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            resultArea.classList.add('show');
+            resultArea.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+            btn.disabled = false;
+            btn.textContent = '🎬 Get Thumbnails';
+            
+            showToast('✅ Thumbnails loaded!', 'success');
+        };
+
+        // TOAST
+        function showToast(msg, type) {
+            const t = document.getElementById('toast');
+            t.textContent = msg;
+            t.className = `toast toast-${type}`;
+            t.style.display = 'block';
+            clearTimeout(t.hide);
+            t.hide = setTimeout(() => t.style.display = 'none', 2500);
+        }
+
+        // Enter key
+        document.getElementById('videoUrl').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') fetchThumbnails();
         });
+
+        console.log('🎬 AHSAN THUMBNAIL DOWNLOADER READY!');
     </script>
-
-
 </body>
-
 </html>
